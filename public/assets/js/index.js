@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("console.log(\"It's working!\");\n\n\n//# sourceURL=webpack://responsive-404-page-design/./src/index.ts?");
+eval("/**\n * Navbar Toggle Menu\n */\nvar toggleMenuBtn = document.getElementById('toggle-menu');\nvar navbarMenu = document.querySelector('.navbar-menu');\ntoggleMenuBtn === null || toggleMenuBtn === void 0 ? void 0 : toggleMenuBtn.addEventListener('click', function () {\n    var _a;\n    navbarMenu === null || navbarMenu === void 0 ? void 0 : navbarMenu.classList.toggle('__show');\n    (_a = toggleMenuBtn\n        .querySelectorAll('i')) === null || _a === void 0 ? void 0 : _a.forEach(function (icon) { return icon.classList.toggle('__hidden'); });\n});\n\n\n//# sourceURL=webpack://responsive-404-page-design/./src/index.ts?");
 
 /***/ })
 
