@@ -5,7 +5,7 @@
 :root {
 	/* Colors */
 	--black-color-00: #141213;
-	--primary-color: #030d4f;
+	--primary-color: #fef7e1;
 	--white-color-00: #e1e1e1;
 
 	/* Font Family */
@@ -15,6 +15,7 @@
 	--normal-fw: 400;
 	--medium-fw: 500;
 	--semibold-fw: 600;
+	--bold-fw: 900;
 
 	/* Font Size */
 	--sm-fs: 0.85rem;
@@ -50,12 +51,13 @@ body {
 	background-color: var(--primary-color);
 	font-size: var(--base-fs);
 	font-weight: var(--normal-fw);
-	color: var(--white-color-00);
+	color: var(--black-color-00);
 }
 
 a {
 	text-decoration: none;
 	color: inherit;
+	transition: 0.2s ease-in-out;
 }
 
 ul {
@@ -91,8 +93,32 @@ img {
 	margin: 0 auto;
 }
 
+.logo {
+	font-size: var(--lg-fs);
+	font-weight: var(--bold-fw);
+}
+
 /***************** NAVBAR *******************/
-/* TODO: Create NAVBAR style */
+.navbar-content {
+	padding: 30px 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.navbar-menu {
+	gap: 1.85rem;
+}
+
+.navbar-link {
+	font-size: var(--lg-fs);
+	font-weight: var(--medium-fw);
+	opacity: 0.85;
+}
+
+.navbar-link:hover {
+	transform: scale(1.05);
+	opacity: 1;
+}
 /************** End of NAVBAR ***************/
 
 /***************** ERROR *******************/
