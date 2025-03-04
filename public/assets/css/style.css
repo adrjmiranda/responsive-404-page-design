@@ -177,6 +177,10 @@ img {
 	display: flex;
 	flex-direction: column;
 	gap: 0.75rem;
+	position: relative;
+	left: -50%;
+	opacity: 0;
+	animation: 1.5s ease-in-out 1s 1 normal forwards text__move;
 }
 
 .error-title {
@@ -190,6 +194,13 @@ img {
 	font-size: var(--lg-fs);
 	font-weight: var(--semibold-fw);
 	line-height: 1.7;
+}
+
+@keyframes text__move {
+	to {
+		opacity: 1;
+		left: 0;
+	}
 }
 
 .error-img {
