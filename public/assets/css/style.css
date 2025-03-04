@@ -1,4 +1,5 @@
 /***************** Imports *******************/
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap');
 
 /***************** Variables *******************/
@@ -8,8 +9,11 @@
 	--primary-color: #fef7e1;
 	--white-color-00: #e1e1e1;
 
+	--shadow-color: rgba(0, 0, 0, 0.04);
+
 	/* Font Family */
 	--text-ff: 'Big Shoulders', sans-serif;
+	--title-ff: 'Alfa Slab One', serif;
 
 	/* Font Weight */
 	--normal-fw: 400;
@@ -21,14 +25,14 @@
 	--sm-fs: 0.85rem;
 	--base-fs: 0.95rem;
 	--lg-fs: 1.15rem;
-	--xxl-fs: 2.85rem;
+	--xxxl-fs: 3.85rem;
 
 	/* Padding */
 	--container-pi: 0.85rem;
 
 	/* Width */
 	--container-mw: 1280px;
-	--inner-container-mw: 1024px;
+	--inner-container-mw: 1140px;
 
 	/* Border Radius */
 	--btn-radius: 0.85rem;
@@ -73,11 +77,13 @@ button {
 	border: none;
 	outline: none;
 	background-color: transparent;
+	cursor: pointer;
 }
 
 img {
 	display: block;
 	max-width: 100%;
+	height: auto;
 }
 
 /***************** Reusable *******************/
@@ -96,6 +102,24 @@ img {
 .logo {
 	font-size: var(--lg-fs);
 	font-weight: var(--bold-fw);
+}
+
+.btn {
+	background-color: var(--black-color-00);
+	border-radius: var(--btn-radius);
+	color: var(--white-color-00);
+	padding: 0.85rem 2.85rem;
+	width: fit-content;
+	font-weight: var(--semibold-fw);
+	font-size: var(--lg-fs);
+	text-transform: uppercase;
+	transition: 0.45s ease-in-out;
+	opacity: 0.95;
+}
+
+.btn:hover {
+	opacity: 1;
+	transform: scale(1.05);
 }
 
 /***************** NAVBAR *******************/
@@ -122,7 +146,51 @@ img {
 /************** End of NAVBAR ***************/
 
 /***************** ERROR *******************/
-/* TODO: Create ERROR style */
+.error-content {
+	min-height: calc(100vh - 90px);
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 100%;
+	align-items: center;
+	column-gap: 2rem;
+}
+
+.error-text {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.error-title {
+	font-family: var(--title-ff);
+	font-size: var(--xxxl-fs);
+	font-weight: var(--normal-fw);
+}
+
+.error-code,
+.error-description {
+	font-size: var(--lg-fs);
+	font-weight: var(--semibold-fw);
+	line-height: 1.7;
+}
+
+.error-img {
+	position: relative;
+}
+
+.error-img::before {
+	content: '';
+	background-color: var(--shadow-color);
+	height: 25px;
+	width: 85%;
+	position: absolute;
+	border-radius: 50%;
+	bottom: -2.5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	box-shadow: 1px 1px 25px 5px var(--shadow-color);
+}
 /************** End of ERROR ***************/
 
 /***************** CONTACT INFO *******************/
