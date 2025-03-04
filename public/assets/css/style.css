@@ -147,7 +147,7 @@ img {
 
 /***************** ERROR *******************/
 .error-content {
-	min-height: calc(100vh - 90px);
+	min-height: calc(100vh - 98px - 2rem);
 	height: 100%;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -194,5 +194,15 @@ img {
 /************** End of ERROR ***************/
 
 /***************** CONTACT INFO *******************/
-/* TODO: Create CONTACT INFO style */
+.contact-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 1rem 0;
+	gap: 0.55rem;
+	font-size: var(--sm-fs);
+	font-weight: var(--medium-fw);
+	opacity: 0.88;
+}
 /************** End of CONTACT INFO ***************/
