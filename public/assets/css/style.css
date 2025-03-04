@@ -207,6 +207,35 @@ img {
 	left: 50%;
 	transform: translateX(-50%);
 	box-shadow: 1px 1px 25px 5px var(--shadow-color);
+	opacity: 0;
+	animation: 2s ease-in-out 1s 1 normal forwards oops__show,
+		2s ease-in-out 3s infinite alternate forwards shadow__oops;
+}
+
+@keyframes shadow__oops {
+	to {
+		width: 55%;
+	}
+}
+
+.error-img img {
+	opacity: 0;
+	top: 0;
+	position: relative;
+	animation: 2s ease-in-out 1s 1 normal forwards oops__show,
+		2s ease-in-out 3s infinite alternate forwards oops__move;
+}
+
+@keyframes oops__show {
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes oops__move {
+	to {
+		top: -2rem;
+	}
 }
 /************** End of ERROR ***************/
 
