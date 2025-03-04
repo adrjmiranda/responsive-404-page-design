@@ -133,6 +133,10 @@ img {
 }
 
 /***************** NAVBAR *******************/
+#navbar {
+	z-index: 100;
+}
+
 .navbar-content {
 	padding-block: 30px;
 	display: flex;
@@ -307,8 +311,12 @@ img {
 		min-height: calc(100vh - 2rem);
 		text-align: center;
 		grid-template-columns: 100%;
-		padding-block: 120px;
-		row-gap: 2.5rem;
+		padding-top: 100px;
+		padding-bottom: 80px;
+	}
+
+	.error-img {
+		margin-top: 3.5rem;
 	}
 	/************** End of ERROR ***************/
 }
